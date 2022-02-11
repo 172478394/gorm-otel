@@ -1,4 +1,4 @@
-module github.com/wei840222/gorm-otel
+module github.com/172478394/gorm-otel
 
 go 1.17
 
