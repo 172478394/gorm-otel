@@ -75,6 +75,7 @@ func tag(sp trace.Span, db *gorm.DB) {
 	sp.SetAttributes(
 		attribute.String(_systemTagKey, db.Name()),
 		attribute.String(_tableTagKey, db.Statement.Table),
+		attribute.String(_sqlLogKey, db.Dialector.Explain(db.Statement.SQL.String(), db.Statement.Vars...)),
 	)
 }
 
